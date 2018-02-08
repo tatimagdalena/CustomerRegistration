@@ -1,0 +1,10 @@
+# Ignore system files
+.DS_Store
+
+# Ignore user data
+CustomerRegistration.xcodeproj/project.xcworkspace/xcuserdata/
+CustomerRegistration.xcworkspace/xcuserdata/
+CustomerRegistration.xcodeproj/xcuserdata/
+
+# Ignore build
+/Build
