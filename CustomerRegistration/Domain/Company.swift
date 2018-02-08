@@ -1,5 +1,5 @@
 //
-//  Customer.swift
+//  Company.swift
 //  CustomerRegistration
 //
 //  Created by Tatiana Magdalena on 08/02/18.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct Customer {
-    var fullName: String
-    var email: String
-    var phone: String
-    var company: Company
+struct Company {
+    var businessName: String
+    var cnpj: String
+    var startDate: Date
+    var mei: Bool
 }
