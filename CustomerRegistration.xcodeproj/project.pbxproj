@@ -15,6 +15,7 @@
 		169DCD3B202C83500028746F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 169DCD39202C83500028746F /* LaunchScreen.storyboard */; };
 		169DCD46202C83500028746F /* CustomerRegistrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DCD45202C83500028746F /* CustomerRegistrationTests.swift */; };
 		169DCD51202C83500028746F /* CustomerRegistrationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DCD50202C83500028746F /* CustomerRegistrationUITests.swift */; };
+		169DCD5F202C86ED0028746F /* ActiveCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DCD5E202C86ED0028746F /* ActiveCoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		169DCD4C202C83500028746F /* CustomerRegistrationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomerRegistrationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		169DCD50202C83500028746F /* CustomerRegistrationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerRegistrationUITests.swift; sourceTree = "<group>"; };
 		169DCD52202C83500028746F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		169DCD5E202C86ED0028746F /* ActiveCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveCoreData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				169DCD39202C83500028746F /* LaunchScreen.storyboard */,
 				169DCD3C202C83500028746F /* Info.plist */,
 				169DCD34202C83500028746F /* CustomerRegistration.xcdatamodeld */,
+				169DCD5E202C86ED0028746F /* ActiveCoreData.swift */,
 			);
 			path = CustomerRegistration;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				169DCD30202C83500028746F /* ViewController.swift in Sources */,
 				169DCD2E202C83500028746F /* AppDelegate.swift in Sources */,
+				169DCD5F202C86ED0028746F /* ActiveCoreData.swift in Sources */,
 				169DCD36202C83500028746F /* CustomerRegistration.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
