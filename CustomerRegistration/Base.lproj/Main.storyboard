@@ -13,7 +13,7 @@
         <!--Clientes-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Clientes" id="BYZ-38-t0r" customClass="ViewController" customModule="CustomerRegistration" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Clientes" id="BYZ-38-t0r" customClass="CustomerListViewController" customModule="CustomerRegistration" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,9 +56,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="9xN-ZR-GPh"/>
                     <connections>
-                        <outlet property="addButton" destination="NkM-wT-Aoa" id="H3z-KW-gXP"/>
-                        <outlet property="emptyMessageLabel" destination="HM8-Di-0Qa" id="bOa-TD-ACL"/>
-                        <outlet property="tableView" destination="fGS-aF-RiW" id="HWp-9t-4Kk"/>
+                        <outlet property="addButton" destination="NkM-wT-Aoa" id="qsY-pE-abl"/>
+                        <outlet property="emptyMessageLabel" destination="HM8-Di-0Qa" id="0RZ-7T-63K"/>
+                        <outlet property="tableView" destination="fGS-aF-RiW" id="2M1-W6-rwF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

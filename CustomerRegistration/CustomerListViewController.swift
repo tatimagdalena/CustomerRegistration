@@ -16,9 +16,14 @@ class CustomerListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        handleEmptyTable()
     }
 
+    func handleEmptyTable() {
+        tableView.isHidden = true
+        emptyMessageLabel.isHidden = false
+    }
+    
     /*
     // MARK: - Navigation
 
