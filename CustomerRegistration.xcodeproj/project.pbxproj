@@ -91,6 +91,14 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		16424FF5202E02BB006EE5A4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				41FA62BB202CD862004AC2D5 /* CustomerListViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		169DCD21202C83500028746F = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				16424FF0202C9A60006EE5A4 /* Domain */,
-				41FA62BB202CD862004AC2D5 /* CustomerListViewController.swift */,
+				16424FF5202E02BB006EE5A4 /* Presentation */,
 				169DCD2D202C83500028746F /* AppDelegate.swift */,
 				169DCD31202C83500028746F /* Main.storyboard */,
 				169DCD37202C83500028746F /* Assets.xcassets */,
