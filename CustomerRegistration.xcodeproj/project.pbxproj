@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		16424FF3202C9A60006EE5A4 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16424FF1202C9A60006EE5A4 /* Customer.swift */; };
 		16424FF4202C9A60006EE5A4 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16424FF2202C9A60006EE5A4 /* Company.swift */; };
+		16424FF7202E1119006EE5A4 /* CustomerViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16424FF6202E1119006EE5A4 /* CustomerViewData.swift */; };
+		16424FF9202E22A7006EE5A4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16424FF8202E22A7006EE5A4 /* RegisterViewController.swift */; };
 		169DCD2E202C83500028746F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DCD2D202C83500028746F /* AppDelegate.swift */; };
-		169DCD30202C83500028746F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DCD2F202C83500028746F /* ViewController.swift */; };
 		169DCD33202C83500028746F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 169DCD31202C83500028746F /* Main.storyboard */; };
 		169DCD36202C83500028746F /* CustomerRegistration.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 169DCD34202C83500028746F /* CustomerRegistration.xcdatamodeld */; };
 		169DCD38202C83500028746F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 169DCD37202C83500028746F /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 		169DCD46202C83500028746F /* CustomerRegistrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DCD45202C83500028746F /* CustomerRegistrationTests.swift */; };
 		169DCD51202C83500028746F /* CustomerRegistrationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DCD50202C83500028746F /* CustomerRegistrationUITests.swift */; };
 		169DCD5F202C86ED0028746F /* ActiveCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DCD5E202C86ED0028746F /* ActiveCoreData.swift */; };
+		41FA62BC202CD862004AC2D5 /* CustomerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA62BB202CD862004AC2D5 /* CustomerListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,9 +42,10 @@
 /* Begin PBXFileReference section */
 		16424FF1202C9A60006EE5A4 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		16424FF2202C9A60006EE5A4 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		16424FF6202E1119006EE5A4 /* CustomerViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerViewData.swift; sourceTree = "<group>"; };
+		16424FF8202E22A7006EE5A4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		169DCD2A202C83500028746F /* CustomerRegistration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomerRegistration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		169DCD2D202C83500028746F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		169DCD2F202C83500028746F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		169DCD32202C83500028746F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		169DCD35202C83500028746F /* CustomerRegistration.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CustomerRegistration.xcdatamodel; sourceTree = "<group>"; };
 		169DCD37202C83500028746F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +58,7 @@
 		169DCD50202C83500028746F /* CustomerRegistrationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerRegistrationUITests.swift; sourceTree = "<group>"; };
 		169DCD52202C83500028746F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		169DCD5E202C86ED0028746F /* ActiveCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveCoreData.swift; sourceTree = "<group>"; };
+		41FA62BB202CD862004AC2D5 /* CustomerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,16 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		16424FF5202E02BB006EE5A4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				41FA62BB202CD862004AC2D5 /* CustomerListViewController.swift */,
+				16424FF6202E1119006EE5A4 /* CustomerViewData.swift */,
+				16424FF8202E22A7006EE5A4 /* RegisterViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		169DCD21202C83500028746F = {
 			isa = PBXGroup;
 			children = (
@@ -115,8 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				16424FF0202C9A60006EE5A4 /* Domain */,
+				16424FF5202E02BB006EE5A4 /* Presentation */,
 				169DCD2D202C83500028746F /* AppDelegate.swift */,
-				169DCD2F202C83500028746F /* ViewController.swift */,
 				169DCD31202C83500028746F /* Main.storyboard */,
 				169DCD37202C83500028746F /* Assets.xcassets */,
 				169DCD39202C83500028746F /* LaunchScreen.storyboard */,
@@ -279,11 +293,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				169DCD30202C83500028746F /* ViewController.swift in Sources */,
+				16424FF7202E1119006EE5A4 /* CustomerViewData.swift in Sources */,
 				16424FF3202C9A60006EE5A4 /* Customer.swift in Sources */,
 				169DCD2E202C83500028746F /* AppDelegate.swift in Sources */,
+				16424FF9202E22A7006EE5A4 /* RegisterViewController.swift in Sources */,
 				169DCD5F202C86ED0028746F /* ActiveCoreData.swift in Sources */,
 				169DCD36202C83500028746F /* CustomerRegistration.xcdatamodeld in Sources */,
+				41FA62BC202CD862004AC2D5 /* CustomerListViewController.swift in Sources */,
 				16424FF4202C9A60006EE5A4 /* Company.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
