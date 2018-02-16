@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CompanyData" representedClassName="CompanyData" syncable="YES">
+        <attribute name="businessName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cnpj" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mei" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CustomerData" inverseName="company" inverseEntity="CustomerData" syncable="YES"/>
+    </entity>
+    <entity name="CustomerData" representedClassName="CustomerData" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="company" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CompanyData" inverseName="owner" inverseEntity="CompanyData" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CustomerData" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="CompanyData" positionX="-54" positionY="-9" width="128" height="120"/>
+    </elements>
+</model>

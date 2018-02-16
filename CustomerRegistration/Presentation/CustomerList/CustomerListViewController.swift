@@ -21,19 +21,21 @@ class CustomerListViewController: UIViewController {
 }
 
 // MARK: - Lifecycle -
+
 extension CustomerListViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
         handleEmptyTable()
-        viewModel = CustomerListViewModel(contactsDataSource: InMemoryContacts(), customerFormatter: CustomerFormatter())
+        viewModel = CustomerListViewModel(contactsDataSource: DataBaseContacts(), customerFormatter: CustomerFormatter())
         requestData()
     }
     
 }
 
 // MARK: - Data -
+
 extension CustomerListViewController {
     
     private func requestData() {
