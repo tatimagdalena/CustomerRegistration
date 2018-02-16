@@ -8,3 +8,6 @@ CustomerRegistration.xcodeproj/xcuserdata/
 
 # Ignore build
 /Build
+
+# Ignore Carthage build
+Carthage/

@@ -1,5 +1,5 @@
 //
-//  CustomerViewData.swift
+//  RetrieveContacts.swift
 //  CustomerRegistration
 //
 //  Created by Tatiana Magdalena on 09/02/18.
@@ -8,8 +8,6 @@
 
 import Foundation
 
-struct CustomerViewData {
-    let owner: String
-    let company: String
-    let companyInitials: String
+protocol RetrieveContacts {
+    func getCustomersList() -> [Customer]
 }

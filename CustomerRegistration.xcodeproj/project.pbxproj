@@ -11,6 +11,9 @@
 		16424FF4202C9A60006EE5A4 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16424FF2202C9A60006EE5A4 /* Company.swift */; };
 		16424FF7202E1119006EE5A4 /* CustomerViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16424FF6202E1119006EE5A4 /* CustomerViewData.swift */; };
 		16424FF9202E22A7006EE5A4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16424FF8202E22A7006EE5A4 /* RegisterViewController.swift */; };
+		16424FFD202E3CF8006EE5A4 /* RetrieveContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16424FFC202E3CF8006EE5A4 /* RetrieveContacts.swift */; };
+		16424FFF202E3DAF006EE5A4 /* InMemoryContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16424FFE202E3DAF006EE5A4 /* InMemoryContacts.swift */; };
+		16425001202E42E8006EE5A4 /* CustomerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16425000202E42E8006EE5A4 /* CustomerListViewModel.swift */; };
 		169DCD2E202C83500028746F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DCD2D202C83500028746F /* AppDelegate.swift */; };
 		169DCD33202C83500028746F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 169DCD31202C83500028746F /* Main.storyboard */; };
 		169DCD36202C83500028746F /* CustomerRegistration.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 169DCD34202C83500028746F /* CustomerRegistration.xcdatamodeld */; };
@@ -19,7 +22,13 @@
 		169DCD46202C83500028746F /* CustomerRegistrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DCD45202C83500028746F /* CustomerRegistrationTests.swift */; };
 		169DCD51202C83500028746F /* CustomerRegistrationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DCD50202C83500028746F /* CustomerRegistrationUITests.swift */; };
 		169DCD5F202C86ED0028746F /* ActiveCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DCD5E202C86ED0028746F /* ActiveCoreData.swift */; };
+		4124D61C2035E8580026D9E9 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4124D61A2035E8580026D9E9 /* Nimble.framework */; };
+		4124D61D2035E8580026D9E9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4124D61B2035E8580026D9E9 /* Quick.framework */; };
+		4124D6262035EC110026D9E9 /* CustomerFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D6252035EC110026D9E9 /* CustomerFormatterTests.swift */; };
+		4124D629203618E90026D9E9 /* CustomerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D628203618E90026D9E9 /* CustomerFormatter.swift */; };
 		41FA62BC202CD862004AC2D5 /* CustomerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA62BB202CD862004AC2D5 /* CustomerListViewController.swift */; };
+		41FA62BE2035A9EE004AC2D5 /* CustomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA62BD2035A9EE004AC2D5 /* CustomerCell.swift */; };
+		41FA62C32035DD4D004AC2D5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA62C22035DD4D004AC2D5 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,11 +48,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4124D61E2035E8700026D9E9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		16424FF1202C9A60006EE5A4 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		16424FF2202C9A60006EE5A4 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		16424FF6202E1119006EE5A4 /* CustomerViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerViewData.swift; sourceTree = "<group>"; };
 		16424FF8202E22A7006EE5A4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		16424FFC202E3CF8006EE5A4 /* RetrieveContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveContacts.swift; sourceTree = "<group>"; };
+		16424FFE202E3DAF006EE5A4 /* InMemoryContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryContacts.swift; sourceTree = "<group>"; };
+		16425000202E42E8006EE5A4 /* CustomerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListViewModel.swift; sourceTree = "<group>"; };
 		169DCD2A202C83500028746F /* CustomerRegistration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomerRegistration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		169DCD2D202C83500028746F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		169DCD32202C83500028746F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,7 +82,13 @@
 		169DCD50202C83500028746F /* CustomerRegistrationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerRegistrationUITests.swift; sourceTree = "<group>"; };
 		169DCD52202C83500028746F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		169DCD5E202C86ED0028746F /* ActiveCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveCoreData.swift; sourceTree = "<group>"; };
+		4124D61A2035E8580026D9E9 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		4124D61B2035E8580026D9E9 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		4124D6252035EC110026D9E9 /* CustomerFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerFormatterTests.swift; sourceTree = "<group>"; };
+		4124D628203618E90026D9E9 /* CustomerFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerFormatter.swift; sourceTree = "<group>"; };
 		41FA62BB202CD862004AC2D5 /* CustomerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListViewController.swift; sourceTree = "<group>"; };
+		41FA62BD2035A9EE004AC2D5 /* CustomerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCell.swift; sourceTree = "<group>"; };
+		41FA62C22035DD4D004AC2D5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4124D61C2035E8580026D9E9 /* Nimble.framework in Frameworks */,
+				4124D61D2035E8580026D9E9 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,11 +130,20 @@
 		16424FF5202E02BB006EE5A4 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				41FA62BB202CD862004AC2D5 /* CustomerListViewController.swift */,
-				16424FF6202E1119006EE5A4 /* CustomerViewData.swift */,
+				41FA62C42035DDA1004AC2D5 /* CustomerList */,
 				16424FF8202E22A7006EE5A4 /* RegisterViewController.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		16424FFB202E3C2B006EE5A4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				41FA62C22035DD4D004AC2D5 /* Result.swift */,
+				16424FFC202E3CF8006EE5A4 /* RetrieveContacts.swift */,
+				16424FFE202E3DAF006EE5A4 /* InMemoryContacts.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		169DCD21202C83500028746F = {
@@ -112,6 +153,7 @@
 				169DCD44202C83500028746F /* CustomerRegistrationTests */,
 				169DCD4F202C83500028746F /* CustomerRegistrationUITests */,
 				169DCD2B202C83500028746F /* Products */,
+				4124D6192035E8580026D9E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +170,7 @@
 		169DCD2C202C83500028746F /* CustomerRegistration */ = {
 			isa = PBXGroup;
 			children = (
+				16424FFB202E3C2B006EE5A4 /* Data */,
 				16424FF0202C9A60006EE5A4 /* Domain */,
 				16424FF5202E02BB006EE5A4 /* Presentation */,
 				169DCD2D202C83500028746F /* AppDelegate.swift */,
@@ -145,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				169DCD45202C83500028746F /* CustomerRegistrationTests.swift */,
+				4124D6252035EC110026D9E9 /* CustomerFormatterTests.swift */,
 				169DCD47202C83500028746F /* Info.plist */,
 			);
 			path = CustomerRegistrationTests;
@@ -159,6 +203,27 @@
 			path = CustomerRegistrationUITests;
 			sourceTree = "<group>";
 		};
+		4124D6192035E8580026D9E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4124D61A2035E8580026D9E9 /* Nimble.framework */,
+				4124D61B2035E8580026D9E9 /* Quick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		41FA62C42035DDA1004AC2D5 /* CustomerList */ = {
+			isa = PBXGroup;
+			children = (
+				41FA62BB202CD862004AC2D5 /* CustomerListViewController.swift */,
+				16425000202E42E8006EE5A4 /* CustomerListViewModel.swift */,
+				41FA62BD2035A9EE004AC2D5 /* CustomerCell.swift */,
+				16424FF6202E1119006EE5A4 /* CustomerViewData.swift */,
+				4124D628203618E90026D9E9 /* CustomerFormatter.swift */,
+			);
+			path = CustomerList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,6 +234,7 @@
 				169DCD26202C83500028746F /* Sources */,
 				169DCD27202C83500028746F /* Frameworks */,
 				169DCD28202C83500028746F /* Resources */,
+				4124D6272035ED9E0026D9E9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -186,6 +252,7 @@
 				169DCD3D202C83500028746F /* Sources */,
 				169DCD3E202C83500028746F /* Frameworks */,
 				169DCD3F202C83500028746F /* Resources */,
+				4124D61E2035E8700026D9E9 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -288,6 +355,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4124D6272035ED9E0026D9E9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		169DCD26202C83500028746F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -296,10 +381,16 @@
 				16424FF7202E1119006EE5A4 /* CustomerViewData.swift in Sources */,
 				16424FF3202C9A60006EE5A4 /* Customer.swift in Sources */,
 				169DCD2E202C83500028746F /* AppDelegate.swift in Sources */,
+				41FA62C32035DD4D004AC2D5 /* Result.swift in Sources */,
 				16424FF9202E22A7006EE5A4 /* RegisterViewController.swift in Sources */,
 				169DCD5F202C86ED0028746F /* ActiveCoreData.swift in Sources */,
+				16424FFD202E3CF8006EE5A4 /* RetrieveContacts.swift in Sources */,
+				16425001202E42E8006EE5A4 /* CustomerListViewModel.swift in Sources */,
+				41FA62BE2035A9EE004AC2D5 /* CustomerCell.swift in Sources */,
+				16424FFF202E3DAF006EE5A4 /* InMemoryContacts.swift in Sources */,
 				169DCD36202C83500028746F /* CustomerRegistration.xcdatamodeld in Sources */,
 				41FA62BC202CD862004AC2D5 /* CustomerListViewController.swift in Sources */,
+				4124D629203618E90026D9E9 /* CustomerFormatter.swift in Sources */,
 				16424FF4202C9A60006EE5A4 /* Company.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4124D6262035EC110026D9E9 /* CustomerFormatterTests.swift in Sources */,
 				169DCD46202C83500028746F /* CustomerRegistrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +591,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJVEE6YB6F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CustomerRegistrationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.tatimagdalena.CustomerRegistrationTests;
@@ -516,6 +612,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJVEE6YB6F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CustomerRegistrationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.tatimagdalena.CustomerRegistrationTests;
