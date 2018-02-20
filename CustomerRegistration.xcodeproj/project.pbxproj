@@ -31,6 +31,21 @@
 		4124D61D2035E8580026D9E9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4124D61B2035E8580026D9E9 /* Quick.framework */; };
 		4124D6262035EC110026D9E9 /* CustomerFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D6252035EC110026D9E9 /* CustomerFormatterTests.swift */; };
 		4124D629203618E90026D9E9 /* CustomerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D628203618E90026D9E9 /* CustomerFormatter.swift */; };
+		4124D62B203B1EB10026D9E9 /* RetrieveHeadlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D62A203B1EB10026D9E9 /* RetrieveHeadlines.swift */; };
+		4124D62F203B1EC80026D9E9 /* InMemoryHeadlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D62E203B1EC80026D9E9 /* InMemoryHeadlines.swift */; };
+		4124D631203B1EFC0026D9E9 /* Headlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D630203B1EFC0026D9E9 /* Headlines.swift */; };
+		4124D633203B209D0026D9E9 /* RetrieveHeadlinesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D632203B209D0026D9E9 /* RetrieveHeadlinesTests.swift */; };
+		4124D635203B26670026D9E9 /* NameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D634203B26670026D9E9 /* NameValidator.swift */; };
+		4124D637203B26960026D9E9 /* NameValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D636203B26960026D9E9 /* NameValidatorTests.swift */; };
+		4124D639203B269F0026D9E9 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D638203B269F0026D9E9 /* EmailValidator.swift */; };
+		4124D63B203B26A80026D9E9 /* EmailValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D63A203B26A80026D9E9 /* EmailValidatorTests.swift */; };
+		4124D63D203B27720026D9E9 /* CNPJValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D63C203B27720026D9E9 /* CNPJValidator.swift */; };
+		4124D63F203B28700026D9E9 /* CNPJValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D63E203B28700026D9E9 /* CNPJValidatorTests.swift */; };
+		4124D641203B3B730026D9E9 /* PhoneValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D640203B3B730026D9E9 /* PhoneValidator.swift */; };
+		4124D643203B3E850026D9E9 /* PhoneValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D642203B3E850026D9E9 /* PhoneValidatorTests.swift */; };
+		4124D646203B493A0026D9E9 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D645203B493A0026D9E9 /* RegisterViewModel.swift */; };
+		4124D648203B5F130026D9E9 /* RegisterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D647203B5F130026D9E9 /* RegisterViewModelTests.swift */; };
+		4124D64A203B75B30026D9E9 /* ValidationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D649203B75B30026D9E9 /* ValidationStatus.swift */; };
 		41FA62BC202CD862004AC2D5 /* CustomerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA62BB202CD862004AC2D5 /* CustomerListViewController.swift */; };
 		41FA62BE2035A9EE004AC2D5 /* CustomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA62BD2035A9EE004AC2D5 /* CustomerCell.swift */; };
 		41FA62C32035DD4D004AC2D5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA62C22035DD4D004AC2D5 /* Result.swift */; };
@@ -96,6 +111,21 @@
 		4124D61B2035E8580026D9E9 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		4124D6252035EC110026D9E9 /* CustomerFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerFormatterTests.swift; sourceTree = "<group>"; };
 		4124D628203618E90026D9E9 /* CustomerFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerFormatter.swift; sourceTree = "<group>"; };
+		4124D62A203B1EB10026D9E9 /* RetrieveHeadlines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveHeadlines.swift; sourceTree = "<group>"; };
+		4124D62E203B1EC80026D9E9 /* InMemoryHeadlines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryHeadlines.swift; sourceTree = "<group>"; };
+		4124D630203B1EFC0026D9E9 /* Headlines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Headlines.swift; sourceTree = "<group>"; };
+		4124D632203B209D0026D9E9 /* RetrieveHeadlinesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveHeadlinesTests.swift; sourceTree = "<group>"; };
+		4124D634203B26670026D9E9 /* NameValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameValidator.swift; sourceTree = "<group>"; };
+		4124D636203B26960026D9E9 /* NameValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameValidatorTests.swift; sourceTree = "<group>"; };
+		4124D638203B269F0026D9E9 /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		4124D63A203B26A80026D9E9 /* EmailValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorTests.swift; sourceTree = "<group>"; };
+		4124D63C203B27720026D9E9 /* CNPJValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNPJValidator.swift; sourceTree = "<group>"; };
+		4124D63E203B28700026D9E9 /* CNPJValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNPJValidatorTests.swift; sourceTree = "<group>"; };
+		4124D640203B3B730026D9E9 /* PhoneValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneValidator.swift; sourceTree = "<group>"; };
+		4124D642203B3E850026D9E9 /* PhoneValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneValidatorTests.swift; sourceTree = "<group>"; };
+		4124D645203B493A0026D9E9 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		4124D647203B5F130026D9E9 /* RegisterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelTests.swift; sourceTree = "<group>"; };
+		4124D649203B75B30026D9E9 /* ValidationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationStatus.swift; sourceTree = "<group>"; };
 		41FA62BB202CD862004AC2D5 /* CustomerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListViewController.swift; sourceTree = "<group>"; };
 		41FA62BD2035A9EE004AC2D5 /* CustomerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCell.swift; sourceTree = "<group>"; };
 		41FA62C22035DD4D004AC2D5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -133,6 +163,11 @@
 			children = (
 				16424FF1202C9A60006EE5A4 /* Customer.swift */,
 				16424FF2202C9A60006EE5A4 /* Company.swift */,
+				4124D630203B1EFC0026D9E9 /* Headlines.swift */,
+				4124D634203B26670026D9E9 /* NameValidator.swift */,
+				4124D638203B269F0026D9E9 /* EmailValidator.swift */,
+				4124D63C203B27720026D9E9 /* CNPJValidator.swift */,
+				4124D640203B3B730026D9E9 /* PhoneValidator.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -141,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				41FA62C42035DDA1004AC2D5 /* CustomerList */,
-				16424FF8202E22A7006EE5A4 /* RegisterViewController.swift */,
+				4124D644203B49010026D9E9 /* Registration */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -155,6 +190,8 @@
 				16424FFC202E3CF8006EE5A4 /* RetrieveContacts.swift */,
 				16424FFE202E3DAF006EE5A4 /* InMemoryContacts.swift */,
 				1642500220370004006EE5A4 /* DataBaseContacts.swift */,
+				4124D62A203B1EB10026D9E9 /* RetrieveHeadlines.swift */,
+				4124D62E203B1EC80026D9E9 /* InMemoryHeadlines.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -212,6 +249,12 @@
 			children = (
 				169DCD45202C83500028746F /* CustomerRegistrationTests.swift */,
 				4124D6252035EC110026D9E9 /* CustomerFormatterTests.swift */,
+				4124D632203B209D0026D9E9 /* RetrieveHeadlinesTests.swift */,
+				4124D636203B26960026D9E9 /* NameValidatorTests.swift */,
+				4124D63A203B26A80026D9E9 /* EmailValidatorTests.swift */,
+				4124D63E203B28700026D9E9 /* CNPJValidatorTests.swift */,
+				4124D642203B3E850026D9E9 /* PhoneValidatorTests.swift */,
+				4124D647203B5F130026D9E9 /* RegisterViewModelTests.swift */,
 				169DCD47202C83500028746F /* Info.plist */,
 			);
 			path = CustomerRegistrationTests;
@@ -233,6 +276,16 @@
 				4124D61B2035E8580026D9E9 /* Quick.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4124D644203B49010026D9E9 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				16424FF8202E22A7006EE5A4 /* RegisterViewController.swift */,
+				4124D645203B493A0026D9E9 /* RegisterViewModel.swift */,
+				4124D649203B75B30026D9E9 /* ValidationStatus.swift */,
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 		41FA62C42035DDA1004AC2D5 /* CustomerList */ = {
@@ -402,20 +455,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				1642500320370004006EE5A4 /* DataBaseContacts.swift in Sources */,
+				4124D641203B3B730026D9E9 /* PhoneValidator.swift in Sources */,
 				16424FF7202E1119006EE5A4 /* CustomerViewData.swift in Sources */,
 				16424FF3202C9A60006EE5A4 /* Customer.swift in Sources */,
 				169DCD2E202C83500028746F /* AppDelegate.swift in Sources */,
 				41FA62C32035DD4D004AC2D5 /* Result.swift in Sources */,
+				4124D639203B269F0026D9E9 /* EmailValidator.swift in Sources */,
+				4124D635203B26670026D9E9 /* NameValidator.swift in Sources */,
 				16424FF9202E22A7006EE5A4 /* RegisterViewController.swift in Sources */,
 				169DCD5F202C86ED0028746F /* ActiveCoreData.swift in Sources */,
+				4124D62F203B1EC80026D9E9 /* InMemoryHeadlines.swift in Sources */,
 				16424FFD202E3CF8006EE5A4 /* RetrieveContacts.swift in Sources */,
 				16425001202E42E8006EE5A4 /* CustomerListViewModel.swift in Sources */,
+				4124D62B203B1EB10026D9E9 /* RetrieveHeadlines.swift in Sources */,
 				41FA62BE2035A9EE004AC2D5 /* CustomerCell.swift in Sources */,
 				16424FFF202E3DAF006EE5A4 /* InMemoryContacts.swift in Sources */,
+				4124D646203B493A0026D9E9 /* RegisterViewModel.swift in Sources */,
 				169DCD36202C83500028746F /* CustomerRegistration.xcdatamodeld in Sources */,
 				1642501B20370AA0006EE5A4 /* CustomerData.swift in Sources */,
+				4124D63D203B27720026D9E9 /* CNPJValidator.swift in Sources */,
+				4124D64A203B75B30026D9E9 /* ValidationStatus.swift in Sources */,
 				41FA62BC202CD862004AC2D5 /* CustomerListViewController.swift in Sources */,
 				4124D629203618E90026D9E9 /* CustomerFormatter.swift in Sources */,
+				4124D631203B1EFC0026D9E9 /* Headlines.swift in Sources */,
 				1642501C20370AA0006EE5A4 /* CustomerData+CoreDataProperties.swift in Sources */,
 				16424FF4202C9A60006EE5A4 /* Company.swift in Sources */,
 				1642501920370AA0006EE5A4 /* CompanyData.swift in Sources */,
@@ -427,6 +489,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4124D63B203B26A80026D9E9 /* EmailValidatorTests.swift in Sources */,
+				4124D633203B209D0026D9E9 /* RetrieveHeadlinesTests.swift in Sources */,
+				4124D643203B3E850026D9E9 /* PhoneValidatorTests.swift in Sources */,
+				4124D648203B5F130026D9E9 /* RegisterViewModelTests.swift in Sources */,
+				4124D637203B26960026D9E9 /* NameValidatorTests.swift in Sources */,
+				4124D63F203B28700026D9E9 /* CNPJValidatorTests.swift in Sources */,
 				4124D6262035EC110026D9E9 /* CustomerFormatterTests.swift in Sources */,
 				169DCD46202C83500028746F /* CustomerRegistrationTests.swift in Sources */,
 			);
