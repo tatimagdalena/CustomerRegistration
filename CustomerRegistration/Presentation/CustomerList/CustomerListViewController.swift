@@ -28,7 +28,14 @@ extension CustomerListViewController {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
         handleEmptyTable()
-        viewModel = CustomerListViewModel(contactsDataSource: DataBaseContacts(), customerFormatter: CustomerFormatter())
+        viewModel = CustomerListViewModel(contactsDataSource: DataBaseContacts(),
+                                          customerFormatter: CustomerFormatter())
+//        requestData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         requestData()
     }
     
@@ -84,7 +91,7 @@ extension CustomerListViewController: UITableViewDataSource {
         cell.companyLabel.text = dataModel[indexPath.row].company
         cell.ownerLabel.text = dataModel[indexPath.row].owner
         
-        return UITableViewCell()
+        return cell
     }
     
 }
@@ -97,4 +104,7 @@ extension CustomerListViewController: UITableViewDelegate {
         return 90
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 }

@@ -20,7 +20,8 @@ class RegisterViewModelTests: XCTestCase {
                                                 nameValidator: NameValidator(),
                                                 emailValidator: EmailValidator(),
                                                 phoneValidator: PhoneValidator(),
-                                                cnpjValidator: CNPJValidator())
+                                                cnpjValidator: CNPJValidator(),
+                                                customerFormatter: CustomerFormatter())
     }
     
     override func tearDown() {
@@ -73,10 +74,12 @@ class RegisterViewModelTests: XCTestCase {
         let emailStatus = viewModelUnderTests.emailChanged(newEmail: "mail@domain.com")
         let phoneStatus = viewModelUnderTests.phoneChanged(newPhone: "21987654321")
         let cnpjStatus = viewModelUnderTests.cnpjChanged(newCNPJ: "73439428000109")
+        let businessNameStatus = viewModelUnderTests.businessNameChanged(newBusinessName: "Uma Loja")
         expect(nameStatus).to(equal(ValidationStatus.valid(enableButton: false)))
         expect(emailStatus).to(equal(ValidationStatus.valid(enableButton: false)))
         expect(phoneStatus).to(equal(ValidationStatus.valid(enableButton: false)))
-        expect(cnpjStatus).to(equal(ValidationStatus.valid(enableButton: true)))
+        expect(cnpjStatus).to(equal(ValidationStatus.valid(enableButton: false)))
+        expect(businessNameStatus).to(equal(ValidationStatus.valid(enableButton: true)))
     }
     
 }

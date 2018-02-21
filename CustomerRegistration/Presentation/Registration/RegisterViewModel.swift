@@ -10,34 +10,76 @@ import Foundation
 
 struct RegisterViewModel {
     
-    private let headlinesDataSource: RetrieveHeadlines
+    // MARK: - Contributors -
     
+    private let headlinesDataSource: RetrieveHeadlines
+    private let customerFormatter: CustomerFormatter
     private let nameValidator: NameValidator
     private let emailValidator: EmailValidator
     private let phoneValidator: PhoneValidator
     private let cnpjValidator: CNPJValidator
     
-    private var isNameValid = false
-    private var isEmailValid = false
-    private var isPhoneValid = false
-    private var isCNPJValid = false
+    // MARK: - State tracker -
     
-    init(headlinesDataSource: RetrieveHeadlines, nameValidator: NameValidator, emailValidator: EmailValidator, phoneValidator: PhoneValidator, cnpjValidator: CNPJValidator) {
+    enum PresentationState {
+        case inProgress
+        case readyToRegister
+        
+        init(ready: Bool) {
+            ready ? (self = .readyToRegister) : (self = .inProgress)
+        }
+    }
+    
+    private var isNameValid = false {
+        didSet {
+            presentationState = PresentationState(ready: validateAllFields())
+        }
+    }
+    private var isEmailValid = false {
+        didSet {
+            presentationState = PresentationState(ready: validateAllFields())
+        }
+    }
+    
+    private var isPhoneValid = false {
+        didSet {
+            presentationState = PresentationState(ready: validateAllFields())
+        }
+    }
+    
+    private var isCNPJValid = false {
+        didSet {
+            presentationState = PresentationState(ready: validateAllFields())
+        }
+    }
+    
+    private var isBusinessNameValid = false {
+        didSet {
+            presentationState = PresentationState(ready: validateAllFields())
+        }
+    }
+    
+    private var presentationState = PresentationState.inProgress
+    
+    // MARK: - Initializer -
+    
+    init(headlinesDataSource: RetrieveHeadlines, nameValidator: NameValidator, emailValidator: EmailValidator, phoneValidator: PhoneValidator, cnpjValidator: CNPJValidator, customerFormatter: CustomerFormatter) {
         self.headlinesDataSource = headlinesDataSource
         self.nameValidator = nameValidator
         self.emailValidator = emailValidator
         self.phoneValidator = phoneValidator
         self.cnpjValidator = cnpjValidator
+        self.customerFormatter = customerFormatter
     }
     
-    func getHeadlines() -> Result<Headlines> {
-        let headlines = headlinesDataSource.getHeadlines()
-        if headlines.fullName.isEmpty {
-            return .empty
-        }
-        else {
-            return .withValue(headlines)
-        }
+}
+
+// MARK: - Public API -
+
+extension RegisterViewModel {
+    
+    func getHeadlines() -> Headlines {
+        return headlinesDataSource.getHeadlines()
     }
     
     mutating func fullNameChanged(newName: String) -> ValidationStatus {
@@ -60,8 +102,32 @@ struct RegisterViewModel {
         return ValidationStatus(bool: isCNPJValid, enableButton: validateAllFields(), description: "Entre com um CNPJ válido")
     }
     
-    private func validateAllFields() -> Bool {
-        return isNameValid && isEmailValid && isPhoneValid && isCNPJValid
+    mutating func businessNameChanged(newBusinessName: String) -> ValidationStatus {
+        isBusinessNameValid = newBusinessName.isEmpty ? false : true
+        return ValidationStatus(bool: isBusinessNameValid, enableButton: validateAllFields(), description: "Entre com o nome fantasia")
+    }
+    
+    mutating func register(customerInput: CustomerInput) -> ValidationStatus {
+        
+        guard presentationState == .readyToRegister
+            else {
+                return .invalid(description: "Preencha todas as informações corretamente")
+        }
+        
+        let customer = customerFormatter.transformToDomainData(customerInput: customerInput)
+        let customerData = customerFormatter.transformToDataModel(customer: customer)
+        customerData.save()
+        return .valid(enableButton: false)
+    }
+    
+}
+
+// MARK: - Private methods -
+
+private extension RegisterViewModel {
+    
+    func validateAllFields() -> Bool {
+        return isNameValid && isEmailValid && isPhoneValid && isCNPJValid && isBusinessNameValid
     }
     
 }

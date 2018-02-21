@@ -17,3 +17,15 @@ struct Headlines {
     let startDate: String
     let isMei: String
 }
+
+extension Headlines {
+    init() {
+        fullName = ""
+        email = ""
+        phone = ""
+        businessName = ""
+        cnpj = ""
+        startDate = ""
+        isMei = ""
+    }
+}

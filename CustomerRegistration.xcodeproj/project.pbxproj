@@ -46,6 +46,13 @@
 		4124D646203B493A0026D9E9 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D645203B493A0026D9E9 /* RegisterViewModel.swift */; };
 		4124D648203B5F130026D9E9 /* RegisterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D647203B5F130026D9E9 /* RegisterViewModelTests.swift */; };
 		4124D64A203B75B30026D9E9 /* ValidationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D649203B75B30026D9E9 /* ValidationStatus.swift */; };
+		4124D651203DCA2D0026D9E9 /* HeadlinesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D64F203DCA2D0026D9E9 /* HeadlinesData.swift */; };
+		4124D652203DCA2D0026D9E9 /* HeadlinesData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D650203DCA2D0026D9E9 /* HeadlinesData+CoreDataProperties.swift */; };
+		4124D654203DCAD00026D9E9 /* DataBaseHeadlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D653203DCAD00026D9E9 /* DataBaseHeadlines.swift */; };
+		4124D657203DD5B70026D9E9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D656203DD5B70026D9E9 /* UIColor.swift */; };
+		4124D659203DD5BF0026D9E9 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D658203DD5BF0026D9E9 /* UIButton.swift */; };
+		4124D65D203EFD020026D9E9 /* CustomerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D65C203EFD020026D9E9 /* CustomerInput.swift */; };
+		4124D65F203F18580026D9E9 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D65E203F18580026D9E9 /* String.swift */; };
 		41FA62BC202CD862004AC2D5 /* CustomerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA62BB202CD862004AC2D5 /* CustomerListViewController.swift */; };
 		41FA62BE2035A9EE004AC2D5 /* CustomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA62BD2035A9EE004AC2D5 /* CustomerCell.swift */; };
 		41FA62C32035DD4D004AC2D5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA62C22035DD4D004AC2D5 /* Result.swift */; };
@@ -126,6 +133,13 @@
 		4124D645203B493A0026D9E9 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		4124D647203B5F130026D9E9 /* RegisterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelTests.swift; sourceTree = "<group>"; };
 		4124D649203B75B30026D9E9 /* ValidationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationStatus.swift; sourceTree = "<group>"; };
+		4124D64F203DCA2D0026D9E9 /* HeadlinesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesData.swift; sourceTree = "<group>"; };
+		4124D650203DCA2D0026D9E9 /* HeadlinesData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeadlinesData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4124D653203DCAD00026D9E9 /* DataBaseHeadlines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseHeadlines.swift; sourceTree = "<group>"; };
+		4124D656203DD5B70026D9E9 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		4124D658203DD5BF0026D9E9 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		4124D65C203EFD020026D9E9 /* CustomerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInput.swift; sourceTree = "<group>"; };
+		4124D65E203F18580026D9E9 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		41FA62BB202CD862004AC2D5 /* CustomerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListViewController.swift; sourceTree = "<group>"; };
 		41FA62BD2035A9EE004AC2D5 /* CustomerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCell.swift; sourceTree = "<group>"; };
 		41FA62C22035DD4D004AC2D5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -161,13 +175,8 @@
 		16424FF0202C9A60006EE5A4 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				16424FF1202C9A60006EE5A4 /* Customer.swift */,
-				16424FF2202C9A60006EE5A4 /* Company.swift */,
-				4124D630203B1EFC0026D9E9 /* Headlines.swift */,
-				4124D634203B26670026D9E9 /* NameValidator.swift */,
-				4124D638203B269F0026D9E9 /* EmailValidator.swift */,
-				4124D63C203B27720026D9E9 /* CNPJValidator.swift */,
-				4124D640203B3B730026D9E9 /* PhoneValidator.swift */,
+				4124D65A203E0E9B0026D9E9 /* Model */,
+				4124D65B203E0EA60026D9E9 /* Validator */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -175,6 +184,7 @@
 		16424FF5202E02BB006EE5A4 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				4124D628203618E90026D9E9 /* CustomerFormatter.swift */,
 				41FA62C42035DDA1004AC2D5 /* CustomerList */,
 				4124D644203B49010026D9E9 /* Registration */,
 			);
@@ -192,6 +202,7 @@
 				1642500220370004006EE5A4 /* DataBaseContacts.swift */,
 				4124D62A203B1EB10026D9E9 /* RetrieveHeadlines.swift */,
 				4124D62E203B1EC80026D9E9 /* InMemoryHeadlines.swift */,
+				4124D653203DCAD00026D9E9 /* DataBaseHeadlines.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -199,8 +210,10 @@
 		1642500C203708EC006EE5A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4124D64F203DCA2D0026D9E9 /* HeadlinesData.swift */,
 				1642501520370AA0006EE5A4 /* CompanyData.swift */,
 				1642501720370AA0006EE5A4 /* CustomerData.swift */,
+				4124D650203DCA2D0026D9E9 /* HeadlinesData+CoreDataProperties.swift */,
 				1642501620370AA0006EE5A4 /* CompanyData+CoreDataProperties.swift */,
 				1642501820370AA0006EE5A4 /* CustomerData+CoreDataProperties.swift */,
 				169DCD34202C83500028746F /* CustomerRegistration.xcdatamodeld */,
@@ -232,6 +245,7 @@
 		169DCD2C202C83500028746F /* CustomerRegistration */ = {
 			isa = PBXGroup;
 			children = (
+				4124D655203DD59D0026D9E9 /* Extensions */,
 				16424FFB202E3C2B006EE5A4 /* Data */,
 				16424FF0202C9A60006EE5A4 /* Domain */,
 				16424FF5202E02BB006EE5A4 /* Presentation */,
@@ -283,9 +297,41 @@
 			children = (
 				16424FF8202E22A7006EE5A4 /* RegisterViewController.swift */,
 				4124D645203B493A0026D9E9 /* RegisterViewModel.swift */,
+				4124D65C203EFD020026D9E9 /* CustomerInput.swift */,
 				4124D649203B75B30026D9E9 /* ValidationStatus.swift */,
 			);
 			path = Registration;
+			sourceTree = "<group>";
+		};
+		4124D655203DD59D0026D9E9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4124D656203DD5B70026D9E9 /* UIColor.swift */,
+				4124D658203DD5BF0026D9E9 /* UIButton.swift */,
+				4124D65E203F18580026D9E9 /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4124D65A203E0E9B0026D9E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				16424FF1202C9A60006EE5A4 /* Customer.swift */,
+				16424FF2202C9A60006EE5A4 /* Company.swift */,
+				4124D630203B1EFC0026D9E9 /* Headlines.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4124D65B203E0EA60026D9E9 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				4124D634203B26670026D9E9 /* NameValidator.swift */,
+				4124D638203B269F0026D9E9 /* EmailValidator.swift */,
+				4124D63C203B27720026D9E9 /* CNPJValidator.swift */,
+				4124D640203B3B730026D9E9 /* PhoneValidator.swift */,
+			);
+			path = Validator;
 			sourceTree = "<group>";
 		};
 		41FA62C42035DDA1004AC2D5 /* CustomerList */ = {
@@ -295,7 +341,6 @@
 				16425000202E42E8006EE5A4 /* CustomerListViewModel.swift */,
 				41FA62BD2035A9EE004AC2D5 /* CustomerCell.swift */,
 				16424FF6202E1119006EE5A4 /* CustomerViewData.swift */,
-				4124D628203618E90026D9E9 /* CustomerFormatter.swift */,
 			);
 			path = CustomerList;
 			sourceTree = "<group>";
@@ -459,27 +504,34 @@
 				16424FF7202E1119006EE5A4 /* CustomerViewData.swift in Sources */,
 				16424FF3202C9A60006EE5A4 /* Customer.swift in Sources */,
 				169DCD2E202C83500028746F /* AppDelegate.swift in Sources */,
+				4124D657203DD5B70026D9E9 /* UIColor.swift in Sources */,
 				41FA62C32035DD4D004AC2D5 /* Result.swift in Sources */,
 				4124D639203B269F0026D9E9 /* EmailValidator.swift in Sources */,
+				4124D659203DD5BF0026D9E9 /* UIButton.swift in Sources */,
 				4124D635203B26670026D9E9 /* NameValidator.swift in Sources */,
+				4124D65D203EFD020026D9E9 /* CustomerInput.swift in Sources */,
 				16424FF9202E22A7006EE5A4 /* RegisterViewController.swift in Sources */,
 				169DCD5F202C86ED0028746F /* ActiveCoreData.swift in Sources */,
 				4124D62F203B1EC80026D9E9 /* InMemoryHeadlines.swift in Sources */,
+				4124D651203DCA2D0026D9E9 /* HeadlinesData.swift in Sources */,
 				16424FFD202E3CF8006EE5A4 /* RetrieveContacts.swift in Sources */,
 				16425001202E42E8006EE5A4 /* CustomerListViewModel.swift in Sources */,
 				4124D62B203B1EB10026D9E9 /* RetrieveHeadlines.swift in Sources */,
 				41FA62BE2035A9EE004AC2D5 /* CustomerCell.swift in Sources */,
 				16424FFF202E3DAF006EE5A4 /* InMemoryContacts.swift in Sources */,
+				4124D652203DCA2D0026D9E9 /* HeadlinesData+CoreDataProperties.swift in Sources */,
 				4124D646203B493A0026D9E9 /* RegisterViewModel.swift in Sources */,
 				169DCD36202C83500028746F /* CustomerRegistration.xcdatamodeld in Sources */,
 				1642501B20370AA0006EE5A4 /* CustomerData.swift in Sources */,
 				4124D63D203B27720026D9E9 /* CNPJValidator.swift in Sources */,
 				4124D64A203B75B30026D9E9 /* ValidationStatus.swift in Sources */,
+				4124D654203DCAD00026D9E9 /* DataBaseHeadlines.swift in Sources */,
 				41FA62BC202CD862004AC2D5 /* CustomerListViewController.swift in Sources */,
 				4124D629203618E90026D9E9 /* CustomerFormatter.swift in Sources */,
 				4124D631203B1EFC0026D9E9 /* Headlines.swift in Sources */,
 				1642501C20370AA0006EE5A4 /* CustomerData+CoreDataProperties.swift in Sources */,
 				16424FF4202C9A60006EE5A4 /* Company.swift in Sources */,
+				4124D65F203F18580026D9E9 /* String.swift in Sources */,
 				1642501920370AA0006EE5A4 /* CompanyData.swift in Sources */,
 				1642501A20370AA0006EE5A4 /* CompanyData+CoreDataProperties.swift in Sources */,
 			);
