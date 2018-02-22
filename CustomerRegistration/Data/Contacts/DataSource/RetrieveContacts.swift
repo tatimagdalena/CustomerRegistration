@@ -10,4 +10,6 @@ import Foundation
 
 protocol RetrieveContacts {
     func getCustomersList() -> [Customer]
+    func getCustomer(with email: String) throws -> Customer
+    func deleteCustomer(with email: String) -> Bool
 }

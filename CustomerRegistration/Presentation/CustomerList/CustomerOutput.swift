@@ -1,5 +1,5 @@
 //
-//  CustomerViewData.swift
+//  CustomerOutput.swift
 //  CustomerRegistration
 //
 //  Created by Tatiana Magdalena on 09/02/18.
@@ -8,8 +8,10 @@
 
 import Foundation
 
-struct CustomerViewData {
+struct CustomerOutput {
     let owner: String
     let company: String
-    let companyInitials: String    
+    let companyInitials: String
+    
+    let customerId: String
 }

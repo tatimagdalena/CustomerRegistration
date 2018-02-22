@@ -16,7 +16,7 @@ class CustomerListViewController: UIViewController {
     @IBOutlet var addButton: UIButton!
     // MARK: Properties
     private var viewModel: CustomerListViewModel!
-    private var dataModel = [CustomerViewData]()
+    private var dataModel = [CustomerOutput]()
     
 }
 
@@ -30,7 +30,6 @@ extension CustomerListViewController {
         handleEmptyTable()
         viewModel = CustomerListViewModel(contactsDataSource: DataBaseContacts(),
                                           customerFormatter: CustomerFormatter())
-//        requestData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,7 +48,7 @@ extension CustomerListViewController {
         let result = viewModel.getCustomers()
         switch result {
         case .empty:
-            dataModel = [CustomerViewData]()
+            dataModel = [CustomerOutput]()
             handleEmptyTable()
         case .withValue(let customers):
             dataModel = customers
@@ -85,7 +84,8 @@ extension CustomerListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomerCell.identifier, for: indexPath) as? CustomerCell else { fatalError("Cell does not exist in storyboard") }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomerCell.identifier, for: indexPath) as? CustomerCell
+            else { fatalError("Cell does not exist in storyboard") }
         
         cell.captionLabel.text = dataModel[indexPath.row].companyInitials
         cell.companyLabel.text = dataModel[indexPath.row].company
@@ -105,6 +105,23 @@ extension CustomerListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let id = dataModel[indexPath.row].customerId
+        if !id.isEmpty {
+            goToDetails(with: id)
+        }
     }
+}
+
+// MARK: - Navigation -
+
+extension CustomerListViewController {
+    
+    func goToDetails(with customerId: String) {
+        guard let detailsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CustomerDetailsViewController") as? CustomerDetailsViewController
+            else { fatalError("Cell does not exist in storyboard") }
+        
+        detailsVC.customerId = customerId
+        navigationController?.pushViewController(detailsVC, animated: true)
+    }
+    
 }

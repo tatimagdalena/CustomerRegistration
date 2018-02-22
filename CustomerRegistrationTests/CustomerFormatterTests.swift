@@ -12,7 +12,7 @@ import Nimble
 
 class CustomerFormatterTests: XCTestCase {
     
-    private func assertCustomerViewData(_ object: CustomerViewData, expected: CustomerViewData, caller: String) {
+    private func assertCustomerViewData(_ object: CustomerOutput, expected: CustomerOutput, caller: String) {
         expect(object.companyInitials).to(equal(expected.companyInitials), description: "In \(caller)")
         expect(object.company).to(equal(expected.company), description: "In \(caller)")
         expect(object.owner).to(equal(expected.owner), description: "In \(caller)")
@@ -22,9 +22,9 @@ class CustomerFormatterTests: XCTestCase {
         
         let company = Company(businessName: "Lojinha", cnpj: "56588798", startDate: Date(), mei: false)
         let customer = Customer(fullName: "Fulano da Silva", email: "me@domain.com", phone: "2199999999", company: company)
-        let customerViewData = CustomerFormatter().transformToViewData(customer: customer)
+        let customerViewData = CustomerFormatter().transformToOutputData(customer: customer)
         
-        let expectedCustomerViewData = CustomerViewData(owner: "Fulano da Silva", company: "Lojinha", companyInitials: "L")
+        let expectedCustomerViewData = CustomerOutput(owner: "Fulano da Silva", company: "Lojinha", companyInitials: "L")
         
         assertCustomerViewData(customerViewData, expected: expectedCustomerViewData, caller: #function)
     }
@@ -32,9 +32,9 @@ class CustomerFormatterTests: XCTestCase {
     func test_Translation_MoreThanThreeWordsBussinessName() {
         let company = Company(businessName: "Lojinha Escondida No Meio Do Nada", cnpj: "56588798", startDate: Date(), mei: false)
         let customer = Customer(fullName: "Fulano da Silva", email: "me@domain.com", phone: "2199999999", company: company)
-        let customerViewData = CustomerFormatter().transformToViewData(customer: customer)
+        let customerViewData = CustomerFormatter().transformToOutputData(customer: customer)
         
-        let expectedCustomerViewData = CustomerViewData(owner: "Fulano da Silva", company: "Lojinha Escondida No Meio Do Nada", companyInitials: "LEN")
+        let expectedCustomerViewData = CustomerOutput(owner: "Fulano da Silva", company: "Lojinha Escondida No Meio Do Nada", companyInitials: "LEN")
         
         assertCustomerViewData(customerViewData, expected: expectedCustomerViewData, caller: #function)
     }
