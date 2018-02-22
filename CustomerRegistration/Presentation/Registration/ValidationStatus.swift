@@ -8,6 +8,11 @@
 
 import Foundation
 
+enum HexColor: String {
+    case darkGray = "#5C666A"
+    case red = "#D64541"
+}
+
 enum ValidationStatus {
     case valid(enableButton: Bool)
     case invalid(description: String)
@@ -18,6 +23,20 @@ enum ValidationStatus {
         }
         else {
             self = .invalid(description: description)
+        }
+    }
+    
+    var colorHex: HexColor {
+        switch self {
+        case .valid: return .darkGray
+        case .invalid: return .red
+        }
+    }
+    
+    var booleanValue: Bool {
+        switch self {
+        case .valid: return true
+        case .invalid: return false
         }
     }
 }

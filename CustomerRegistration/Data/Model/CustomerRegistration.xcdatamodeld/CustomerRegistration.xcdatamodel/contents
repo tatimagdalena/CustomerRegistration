@@ -14,8 +14,18 @@
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="company" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CompanyData" inverseName="owner" inverseEntity="CompanyData" syncable="YES"/>
     </entity>
+    <entity name="HeadlinesData" representedClassName="HeadlinesData" syncable="YES">
+        <attribute name="businessName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cnpj" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isMei" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="CustomerData" positionX="-63" positionY="-18" width="128" height="120"/>
         <element name="CompanyData" positionX="-54" positionY="-9" width="128" height="120"/>
+        <element name="CustomerData" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="HeadlinesData" positionX="-54" positionY="45" width="128" height="150"/>
     </elements>
 </model>
