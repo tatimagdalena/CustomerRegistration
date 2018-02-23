@@ -19,6 +19,8 @@
 		1642501A20370AA0006EE5A4 /* CompanyData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1642501620370AA0006EE5A4 /* CompanyData+CoreDataProperties.swift */; };
 		1642501B20370AA0006EE5A4 /* CustomerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1642501720370AA0006EE5A4 /* CustomerData.swift */; };
 		1642501C20370AA0006EE5A4 /* CustomerData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1642501820370AA0006EE5A4 /* CustomerData+CoreDataProperties.swift */; };
+		1642502B20406F06006EE5A4 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1642502920406F06006EE5A4 /* RxCocoa.framework */; };
+		1642502C20406F06006EE5A4 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1642502A20406F06006EE5A4 /* RxSwift.framework */; };
 		169DCD2E202C83500028746F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DCD2D202C83500028746F /* AppDelegate.swift */; };
 		169DCD33202C83500028746F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 169DCD31202C83500028746F /* Main.storyboard */; };
 		169DCD36202C83500028746F /* CustomerRegistration.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 169DCD34202C83500028746F /* CustomerRegistration.xcdatamodeld */; };
@@ -100,6 +102,8 @@
 		1642501620370AA0006EE5A4 /* CompanyData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompanyData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1642501720370AA0006EE5A4 /* CustomerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerData.swift; sourceTree = "<group>"; };
 		1642501820370AA0006EE5A4 /* CustomerData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomerData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1642502920406F06006EE5A4 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		1642502A20406F06006EE5A4 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		169DCD2A202C83500028746F /* CustomerRegistration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomerRegistration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		169DCD2D202C83500028746F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		169DCD32202C83500028746F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1642502B20406F06006EE5A4 /* RxCocoa.framework in Frameworks */,
+				1642502C20406F06006EE5A4 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +292,8 @@
 		4124D6192035E8580026D9E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1642502920406F06006EE5A4 /* RxCocoa.framework */,
+				1642502A20406F06006EE5A4 /* RxSwift.framework */,
 				4124D61A2035E8580026D9E9 /* Nimble.framework */,
 				4124D61B2035E8580026D9E9 /* Quick.framework */,
 			);
@@ -355,7 +363,7 @@
 				169DCD26202C83500028746F /* Sources */,
 				169DCD27202C83500028746F /* Frameworks */,
 				169DCD28202C83500028746F /* Resources */,
-				4124D6272035ED9E0026D9E9 /* ShellScript */,
+				4124D6272035ED9E0026D9E9 /* Carthage Run Script */,
 			);
 			buildRules = (
 			);
@@ -477,7 +485,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4124D6272035ED9E0026D9E9 /* ShellScript */ = {
+		4124D6272035ED9E0026D9E9 /* Carthage Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -485,7 +493,10 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 			);
+			name = "Carthage Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -708,6 +719,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJVEE6YB6F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CustomerRegistration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.tatimagdalena.CustomerRegistration;
@@ -723,6 +738,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJVEE6YB6F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CustomerRegistration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.tatimagdalena.CustomerRegistration;
