@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class RegisterViewController: UIViewController {
 
@@ -20,7 +22,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet var startDateTextField: UITextField!
     @IBAction func textFieldDidChange(_ sender: UITextField) {
         guard let newText = sender.text else { return }
-        handleNewText(newText, onTextField: sender)
+//        handleNewText(newText, onTextField: sender)
     }
     
     @IBOutlet var startDateTitleLabel: UILabel!
@@ -37,6 +39,7 @@ class RegisterViewController: UIViewController {
     }
     
     // MARK: Properties
+    private var disposeBag = DisposeBag()
     private var viewModel: RegisterViewModel!
     private let dateFormatter = DateFormatter()
     private let datePickerView = UIDatePicker()
@@ -57,7 +60,72 @@ extension RegisterViewController {
                                       phoneValidator: PhoneValidator(),
                                       cnpjValidator: CNPJValidator(),
                                       customerFormatter: CustomerFormatter())
+        
+        configureReactiveBehavior()
+        
         requestData()
+    }
+    
+}
+
+// MARK: - RxSwift
+
+extension RegisterViewController {
+    
+    func configureReactiveBehavior() {
+        nameTextField.rx.text.orEmpty
+            .bind(to: viewModel.fullName)
+            .disposed(by: disposeBag)
+        
+        emailTextField.rx.text.orEmpty
+            .bind(to: viewModel.email)
+            .disposed(by: disposeBag)
+        
+        phoneTextField.rx.text.orEmpty
+            .bind(to: viewModel.phone)
+            .disposed(by: disposeBag)
+        
+        businessNameTextField.rx.text.orEmpty
+            .bind(to: viewModel.businessName)
+            .disposed(by: disposeBag)
+        
+        cnpjTextField.rx.text.orEmpty
+            .bind(to: viewModel.cnpj)
+            .disposed(by: disposeBag)
+        
+        viewModel.fullNameValidation
+            .subscribe(onNext: { status in
+                self.nameTextField.layer.borderColor = UIColor(hexString: status.colorHex.rawValue).cgColor
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.emailValidation
+            .subscribe(onNext: { status in
+                self.emailTextField.layer.borderColor = UIColor(hexString: status.colorHex.rawValue).cgColor
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.phoneValidation
+            .subscribe(onNext: { status in
+                self.phoneTextField.layer.borderColor = UIColor(hexString: status.colorHex.rawValue).cgColor
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.businessNameValidation
+            .subscribe(onNext: { status in
+                self.businessNameTextField.layer.borderColor = UIColor(hexString: status.colorHex.rawValue).cgColor
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.cnpjValidation
+            .subscribe(onNext: { status in
+                self.cnpjTextField.layer.borderColor = UIColor(hexString: status.colorHex.rawValue).cgColor
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.isReadyToRegister
+            .bind(to: doneButton.rx.isEnabled)
+            .disposed(by: disposeBag)
     }
     
 }
@@ -96,12 +164,12 @@ private extension RegisterViewController {
         textField.layer.borderColor = UIColor(hexString: status.colorHex.rawValue).cgColor
     }
     
-    func updateDoneButtonUI(status: ValidationStatus) {
-        switch status {
-        case .valid(let enable): doneButton.isEnabled = enable
-        case .invalid: doneButton.isEnabled = false
-        }
-    }
+//    func updateDoneButtonUI(status: ValidationStatus) {
+//        switch status {
+//        case .valid(let enable): doneButton.isEnabled = enable
+//        case .invalid: doneButton.isEnabled = false
+//        }
+//    }
     
 }
 
@@ -178,37 +246,38 @@ extension RegisterViewController: UITextFieldDelegate {
         return false
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
-        guard let newText = textField.text,
-            textField != startDateTextField
-            else { return }
-        handleNewText(newText, onTextField: textField)
-    }
-    
-    func handleNewText(_ newText: String, onTextField textField: UITextField) {
-        var status = ValidationStatus.invalid(description: "")
-        
-        switch textField {
-        case nameTextField:
-            customerInput.fullName = newText
-            status = viewModel.fullNameChanged(newName: newText)
-        case emailTextField:
-            customerInput.email = newText
-            status = viewModel.emailChanged(newEmail: newText)
-        case phoneTextField:
-            customerInput.phone = newText
-            status = viewModel.phoneChanged(newPhone: newText)
-        case cnpjTextField:
-            customerInput.cnpj = newText
-            status = viewModel.cnpjChanged(newCNPJ: newText)
-        case businessNameTextField:
-            customerInput.businessName = newText
-            status = viewModel.businessNameChanged(newBusinessName: newText)
-        default: break
-        }
-        
-        updateTextFieldUI(textField, status: status)
-        updateDoneButtonUI(status: status)
-    }
+//    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+//        guard let newText = textField.text,
+//            textField != startDateTextField,
+//            textField != nameTextField
+//            else { return }
+//        handleNewText(newText, onTextField: textField)
+//    }
+//
+//    func handleNewText(_ newText: String, onTextField textField: UITextField) {
+//        var status = ValidationStatus.invalid(description: "")
+//
+//        switch textField {
+////        case nameTextField:
+////            customerInput.fullName = newText
+////            status = viewModel.fullNameChanged(newName: newText)
+//        case emailTextField:
+//            customerInput.email = newText
+//            status = viewModel.emailChanged(newEmail: newText)
+//        case phoneTextField:
+//            customerInput.phone = newText
+//            status = viewModel.phoneChanged(newPhone: newText)
+//        case cnpjTextField:
+//            customerInput.cnpj = newText
+//            status = viewModel.cnpjChanged(newCNPJ: newText)
+//        case businessNameTextField:
+//            customerInput.businessName = newText
+//            status = viewModel.businessNameChanged(newBusinessName: newText)
+//        default: break
+//        }
+//
+//        updateTextFieldUI(textField, status: status)
+////        updateDoneButtonUI(status: status)
+//    }
     
 }
