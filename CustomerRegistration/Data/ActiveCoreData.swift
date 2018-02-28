@@ -117,7 +117,7 @@ extension NSManagedObject {
     
     fileprivate class func findFirstHelper<T>(attribute: String, value: String) -> T? {
         
-        if attribute == "" || value == "" {
+        if attribute == "" /*|| value == ""*/ {
             
             return nil
         }

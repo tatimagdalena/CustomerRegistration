@@ -10,11 +10,12 @@ import Foundation
 
 struct CustomerFormatter {
     
-    func transformToViewData(customer: Customer) -> CustomerViewData {
+    func transformToOutputData(customer: Customer) -> CustomerOutput {
         let caption = generateCaption(text: customer.company.businessName)
-        return CustomerViewData(owner: customer.fullName,
+        return CustomerOutput(owner: customer.fullName,
                                 company: customer.company.businessName,
-                                companyInitials: caption)
+                                companyInitials: caption,
+                                customerId: customer.email)
     }
     
     func transformToDataModel(customer: Customer) -> CustomerData {
@@ -49,6 +50,20 @@ struct CustomerFormatter {
         return customer
     }
     
+    func merge(headlines: DetailsHeadlines, customer: Customer) -> DetailsOutput {
+        
+        var information = [(title: String, value: String)]()
+        information.append((title: headlines.businessName, value: customer.company.businessName))
+        information.append((title: headlines.cnpj, value: customer.company.cnpj))
+        information.append((title: headlines.startDate, value: detailFormattedDate(from: customer.company.startDate)))
+        information.append((title: headlines.isMei, value: customer.company.mei.description))
+        information.append((title: headlines.owner, value: customer.fullName))
+        information.append((title: headlines.email, value: customer.email))
+        information.append((title: headlines.phone, value: customer.phone))
+        
+        return DetailsOutput(information: information)
+    }
+    
 }
 
 // MARK: - Private methods -
@@ -67,6 +82,13 @@ private extension CustomerFormatter {
             }
         }
         return result
+    }
+    
+    func detailFormattedDate(from date: Date) -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        return dateFormatter.string(from: date)
     }
     
 }

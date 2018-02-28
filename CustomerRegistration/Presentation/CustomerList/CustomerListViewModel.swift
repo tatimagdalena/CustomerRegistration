@@ -18,15 +18,15 @@ struct CustomerListViewModel {
         self.customerFormatter = customerFormatter
     }
     
-    mutating func getCustomers() -> Result<[CustomerViewData]> {
+    func getCustomers() -> Result<[CustomerOutput]> {
         let customers = contactsDataSource.getCustomersList()
         if customers.isEmpty {
             return .empty
         }
         else {
-            var customersViewData = [CustomerViewData]()
+            var customersViewData = [CustomerOutput]()
             for customer in customers {
-                customersViewData.append(customerFormatter.transformToViewData(customer: customer))
+                customersViewData.append(customerFormatter.transformToOutputData(customer: customer))
             }
             return .withValue(customersViewData)
         }
