@@ -18,8 +18,6 @@ struct CustomerDetailsViewModel {
     // MARK: - Properties -
     private let customerId: String
     
-    // MARK: - State tracker -
-    
     // MARK: - Initializer -
     init(headlinesDetailsDataSource: RetrieveDetailsHeadlines, customerDataSource: RetrieveContacts, customerId: String, customerFormatter: CustomerFormatter) {
         self.headlinesDetailsDataSource = headlinesDetailsDataSource
@@ -47,15 +45,6 @@ extension CustomerDetailsViewModel {
     
     func deleteCustomer(with email: String) -> ValidationStatus {
         let success = customerDataSource.deleteCustomer(with: email)
-        if success {
-            return ValidationStatus(bool: true)
-        }
-        return ValidationStatus(bool: false)
+        return ValidationStatus(bool: success)
     }
-}
-
-// MARK: - Private methods -
-
-private extension CustomerDetailsViewModel {
-    
 }
