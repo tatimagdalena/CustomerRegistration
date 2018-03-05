@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		161218A22047399D00A0C125 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161218A12047399D00A0C125 /* Errors.swift */; };
+		161218A52048465A00A0C125 /* Cuckoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 161218A42048465A00A0C125 /* Cuckoo.framework */; };
+		161218A9204846FF00A0C125 /* CustomerDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161218A8204846FF00A0C125 /* CustomerDetailsViewModelTests.swift */; };
+		161218AB204850FB00A0C125 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161218AA204850FB00A0C125 /* GeneratedMocks.swift */; };
 		16424FF3202C9A60006EE5A4 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16424FF1202C9A60006EE5A4 /* Customer.swift */; };
 		16424FF4202C9A60006EE5A4 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16424FF2202C9A60006EE5A4 /* Company.swift */; };
 		16424FF7202E1119006EE5A4 /* CustomerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16424FF6202E1119006EE5A4 /* CustomerOutput.swift */; };
@@ -97,6 +100,9 @@
 
 /* Begin PBXFileReference section */
 		161218A12047399D00A0C125 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		161218A42048465A00A0C125 /* Cuckoo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cuckoo.framework; path = Carthage/Build/iOS/Cuckoo.framework; sourceTree = "<group>"; };
+		161218A8204846FF00A0C125 /* CustomerDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		161218AA204850FB00A0C125 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		16424FF1202C9A60006EE5A4 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		16424FF2202C9A60006EE5A4 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		16424FF6202E1119006EE5A4 /* CustomerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerOutput.swift; sourceTree = "<group>"; };
@@ -166,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				161218A52048465A00A0C125 /* Cuckoo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +276,7 @@
 		169DCD44202C83500028746F /* CustomerRegistrationTests */ = {
 			isa = PBXGroup;
 			children = (
+				161218AA204850FB00A0C125 /* GeneratedMocks.swift */,
 				169DCD45202C83500028746F /* CustomerRegistrationTests.swift */,
 				4124D6252035EC110026D9E9 /* CustomerFormatterTests.swift */,
 				4124D632203B209D0026D9E9 /* RetrieveHeadlinesTests.swift */,
@@ -277,6 +285,7 @@
 				4124D63E203B28700026D9E9 /* CNPJValidatorTests.swift */,
 				4124D642203B3E850026D9E9 /* PhoneValidatorTests.swift */,
 				4124D647203B5F130026D9E9 /* RegisterViewModelTests.swift */,
+				161218A8204846FF00A0C125 /* CustomerDetailsViewModelTests.swift */,
 				169DCD47202C83500028746F /* Info.plist */,
 			);
 			path = CustomerRegistrationTests;
@@ -294,6 +303,7 @@
 		4124D6192035E8580026D9E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				161218A42048465A00A0C125 /* Cuckoo.framework */,
 				4124D61A2035E8580026D9E9 /* Nimble.framework */,
 				4124D61B2035E8580026D9E9 /* Quick.framework */,
 			);
@@ -435,7 +445,8 @@
 				169DCD26202C83500028746F /* Sources */,
 				169DCD27202C83500028746F /* Frameworks */,
 				169DCD28202C83500028746F /* Resources */,
-				4124D6272035ED9E0026D9E9 /* ShellScript */,
+				4124D6272035ED9E0026D9E9 /* Carthage Run Script */,
+				161218A32048436F00A0C125 /* Cuckoo Run Script */,
 			);
 			buildRules = (
 			);
@@ -557,7 +568,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4124D6272035ED9E0026D9E9 /* ShellScript */ = {
+		161218A32048436F00A0C125 /* Cuckoo Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Cuckoo Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Define output file. Change \"$PROJECT_DIR/Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"$PROJECT_DIR//${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = $OUTPUT_FILE\"\n\n# Define input directory. Change \"$PROJECT_DIR\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"$PROJECT_DIR\"\necho \"Mocks Input Directory = $INPUT_DIR\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\nCarthage/Checkouts/Cuckoo/run generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/CustomerRegistration/Data/Contacts/DataSource/RetrieveContacts.swift\" \\\n\"$INPUT_DIR/CustomerRegistration/Data/Headlines/DataSource/RetrieveDetailsHeadlines.swift\" \\\n\"$INPUT_DIR/CustomerRegistration/Presentation/CustomerFormatter.swift\" \\\n\"$INPUT_DIR/CustomerRegistration/Presentation/CustomerDetails/CustomerDetailsViewModel.swift\"\n\n\n#\"$INPUT_DIR/FileName1.swift\" \\\n#\"$INPUT_DIR/FileName2.swift\" \\\n#\"$INPUT_DIR/FileName3.swift\"\n# ... and so forth\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.";
+		};
+		4124D6272035ED9E0026D9E9 /* Carthage Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -565,7 +590,9 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Cuckoo.framework",
 			);
+			name = "Carthage Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -633,10 +660,12 @@
 				4124D633203B209D0026D9E9 /* RetrieveHeadlinesTests.swift in Sources */,
 				4124D643203B3E850026D9E9 /* PhoneValidatorTests.swift in Sources */,
 				4124D648203B5F130026D9E9 /* RegisterViewModelTests.swift in Sources */,
+				161218A9204846FF00A0C125 /* CustomerDetailsViewModelTests.swift in Sources */,
 				4124D637203B26960026D9E9 /* NameValidatorTests.swift in Sources */,
 				4124D63F203B28700026D9E9 /* CNPJValidatorTests.swift in Sources */,
 				4124D6262035EC110026D9E9 /* CustomerFormatterTests.swift in Sources */,
 				169DCD46202C83500028746F /* CustomerRegistrationTests.swift in Sources */,
+				161218AB204850FB00A0C125 /* GeneratedMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,6 +825,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJVEE6YB6F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CustomerRegistration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.tatimagdalena.CustomerRegistration;
@@ -811,6 +844,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJVEE6YB6F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CustomerRegistration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.tatimagdalena.CustomerRegistration;

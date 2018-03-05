@@ -24,7 +24,7 @@ class CustomerFormatterTests: XCTestCase {
         let customer = Customer(fullName: "Fulano da Silva", email: "me@domain.com", phone: "2199999999", company: company)
         let customerViewData = CustomerFormatter().transformToOutputData(customer: customer)
         
-        let expectedCustomerViewData = CustomerOutput(owner: "Fulano da Silva", company: "Lojinha", companyInitials: "L")
+        let expectedCustomerViewData = CustomerOutput(owner: "Fulano da Silva", company: "Lojinha", companyInitials: "L", customerId: "me@domain.com")
         
         assertCustomerViewData(customerViewData, expected: expectedCustomerViewData, caller: #function)
     }
@@ -34,7 +34,7 @@ class CustomerFormatterTests: XCTestCase {
         let customer = Customer(fullName: "Fulano da Silva", email: "me@domain.com", phone: "2199999999", company: company)
         let customerViewData = CustomerFormatter().transformToOutputData(customer: customer)
         
-        let expectedCustomerViewData = CustomerOutput(owner: "Fulano da Silva", company: "Lojinha Escondida No Meio Do Nada", companyInitials: "LEN")
+        let expectedCustomerViewData = CustomerOutput(owner: "Fulano da Silva", company: "Lojinha Escondida No Meio Do Nada", companyInitials: "LEN", customerId: "me@domain.com")
         
         assertCustomerViewData(customerViewData, expected: expectedCustomerViewData, caller: #function)
     }
