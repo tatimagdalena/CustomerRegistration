@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NGb-b4-x28">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NGb-b4-x28">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -160,8 +160,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" textContentType="name"/>
                                 <connections>
-                                    <action selector="textFieldDidChange:" destination="ipe-gK-gXe" eventType="editingChanged" id="iRh-ro-BCG"/>
-                                    <outlet property="delegate" destination="ipe-gK-gXe" id="Md8-Tp-Rdv"/>
+                                    <outlet property="delegate" destination="ipe-gK-gXe" id="r1v-M3-fgl"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BPT-ua-QpD">
@@ -173,8 +172,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                 <connections>
-                                    <action selector="textFieldDidChange:" destination="ipe-gK-gXe" eventType="editingChanged" id="Wiy-pg-ch3"/>
-                                    <outlet property="delegate" destination="ipe-gK-gXe" id="O9n-aA-bS2"/>
+                                    <outlet property="delegate" destination="ipe-gK-gXe" id="JLQ-ds-F7d"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f47-5j-tTW">
@@ -186,7 +184,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" textContentType="tel"/>
                                 <connections>
-                                    <action selector="textFieldDidChange:" destination="ipe-gK-gXe" eventType="editingChanged" id="Mvu-h8-ufQ"/>
                                     <outlet property="delegate" destination="ipe-gK-gXe" id="XUb-ul-LQp"/>
                                 </connections>
                             </textField>
@@ -199,7 +196,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" textContentType="organization"/>
                                 <connections>
-                                    <action selector="textFieldDidChange:" destination="ipe-gK-gXe" eventType="editingChanged" id="Q5u-2d-wku"/>
                                     <outlet property="delegate" destination="ipe-gK-gXe" id="cJo-MH-3Tj"/>
                                 </connections>
                             </textField>
@@ -212,7 +208,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                 <connections>
-                                    <action selector="textFieldDidChange:" destination="ipe-gK-gXe" eventType="editingChanged" id="hrb-dQ-294"/>
                                     <outlet property="delegate" destination="ipe-gK-gXe" id="zYR-Ow-hnq"/>
                                 </connections>
                             </textField>
@@ -248,14 +243,14 @@
                                     <action selector="register:" destination="ipe-gK-gXe" eventType="touchUpInside" id="ilb-ST-hLF"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sbc-KR-krA">
+                            <textField opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sbc-KR-krA" customClass="DateTextField" customModule="CustomerRegistration" customModuleProvider="target">
                                 <rect key="frame" x="187.5" y="404" width="162.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="ipe-gK-gXe" id="Bur-AS-z1m"/>
-                                </connections>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="dateFormat" value="dd MMMM yyyy"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -293,15 +288,15 @@
                         <viewLayoutGuide key="safeArea" id="teR-3g-Jiy"/>
                     </view>
                     <connections>
-                        <outlet property="businessNameTextField" destination="DTr-UH-qqQ" id="AjF-wc-P9g"/>
-                        <outlet property="cnpjTextField" destination="Uvd-Ya-axC" id="62W-8o-4hI"/>
+                        <outlet property="businessNameTextField" destination="DTr-UH-qqQ" id="klw-4E-qQN"/>
+                        <outlet property="cnpjTextField" destination="Uvd-Ya-axC" id="oX4-9g-yHQ"/>
                         <outlet property="doneButton" destination="R0G-bV-KqZ" id="6Zb-Vs-1Db"/>
-                        <outlet property="emailTextField" destination="BPT-ua-QpD" id="X32-oA-JG0"/>
+                        <outlet property="emailTextField" destination="BPT-ua-QpD" id="4Dw-KY-YIt"/>
                         <outlet property="meiSwitch" destination="v0e-DG-U9i" id="aN6-lB-8z7"/>
                         <outlet property="meiTitleLabel" destination="Eh5-mF-0yW" id="Iq8-A5-k0i"/>
-                        <outlet property="nameTextField" destination="on4-8g-dLK" id="FEE-p9-fkX"/>
-                        <outlet property="phoneTextField" destination="f47-5j-tTW" id="f5R-0Z-606"/>
-                        <outlet property="startDateTextField" destination="Sbc-KR-krA" id="bfz-Vw-71g"/>
+                        <outlet property="nameTextField" destination="on4-8g-dLK" id="9Yf-on-UlM"/>
+                        <outlet property="phoneTextField" destination="f47-5j-tTW" id="1xY-ub-xNs"/>
+                        <outlet property="startDateTextField" destination="Sbc-KR-krA" id="4Gj-9L-f9n"/>
                         <outlet property="startDateTitleLabel" destination="zBY-Od-J5O" id="ICB-E6-fiX"/>
                         <outlet property="toolbarView" destination="If9-ug-Dhb" id="cCO-Ye-5A7"/>
                     </connections>

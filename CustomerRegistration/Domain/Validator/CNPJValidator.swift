@@ -11,7 +11,7 @@ import Foundation
 struct CNPJValidator {
     
     func validate(cnpj: String) -> Bool {
-        let numbers = cnpj.flatMap({Int(String($0))})
+        let numbers = cnpj.compactMap({Int(String($0))})
         guard numbers.count == 14 && Set(numbers).count != 1 else { return false }
         let sum1 = 11 - ( numbers[11] * 2 +
             numbers[10] * 3 +
